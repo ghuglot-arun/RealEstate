@@ -1,0 +1,53 @@
+.listings {
+  padding: 50px 10vw;
+  background-color: #f9f9f9;
+}
+
+.listings h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.listing-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.listing-card:hover {
+  transform: translateY(-5px);
+}
+
+.listing-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.listing-info {
+  padding: 15px;
+}
+
+.listing-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.listing-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.listing-info span {
+  font-weight: bold;
+  color: #007bff;
+}

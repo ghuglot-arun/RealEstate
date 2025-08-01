@@ -1,10 +1,16 @@
 import React from 'react';
 import './Listing.css';
 import { projectsData } from '../../assets/assets';
+import { motion } from 'framer-motion';
 
 const Listings = () => {
   return (
-    <div className="listings" id='listings'>
+    <motion.div
+     initial={{opacity:0, x:-200}}
+      transition={{duration:1}}
+      whileInView={{opacity:1, x:0}}
+      viewport={{once:true}}
+    className="listings" id='listings'>
       <h2>Featured Listings</h2>
       <div className="listings-grid">
         {projectsData.map((item, index) => (
@@ -18,7 +24,7 @@ const Listings = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

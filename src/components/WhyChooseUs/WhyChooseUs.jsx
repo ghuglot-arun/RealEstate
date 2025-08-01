@@ -1,10 +1,16 @@
 import React from 'react';
 import './WhyChooseUs.css';
 import { FaCheckCircle, FaUsers, FaHandshake, FaShieldAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const WhyChooseUs = () => {
   return (
-    <div className="why-choose-us">
+    <motion.div
+    initial={{opacity:0, x:200}}
+      transition={{duration:1}}
+      whileInView={{opacity:1, x:0}}
+      viewport={{once:true}}
+    className="why-choose-us">
       <h2>Why Choose Us</h2>
       <p className="subtitle">What makes us the most trusted real estate partner</p>
 
@@ -33,7 +39,7 @@ const WhyChooseUs = () => {
           <p>We prioritize transparency, security, and trust in all our deals.</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

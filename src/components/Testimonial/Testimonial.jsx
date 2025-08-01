@@ -1,10 +1,16 @@
 import React from "react";
 import { testimonialsData } from "../../assets/assets";
 import "./Testimonial.css";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <div className="testimonials" id="testimonials">
+    <motion.div 
+    initial={{opacity:0, x:100}}
+      transition={{duration:1}}
+      whileInView={{opacity:1, x:0}}
+      viewport={{once:true}}
+    className="testimonials" id="testimonials">
       <h2>What Our Clients Say</h2>
       <div className="testimonials-container">
         {testimonialsData.map((item, index) => (
@@ -19,7 +25,7 @@ const Testimonials = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
